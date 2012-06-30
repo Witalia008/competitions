@@ -16,7 +16,6 @@
     "files.associations": {
         "[Dd]ockerfile*": "dockerfile",
         "docker-compose*": "yaml",
-        "random": "cpp"
     },
     // Editor.
     "editor.renderWhitespace": "all",
