@@ -1,0 +1,24 @@
+co scanf {
+    cin [0]
+    gt [1] [0] 126
+    if [1] ac
+    lt [1] [0] 33
+    if [1] ac
+    eq [1] [0] 72
+    if [1] set [2] 1
+    eq [1] [0] 81
+    if [1] set [2] 1
+    eq [1] [0] 57
+    if [1] set [2] 1
+}
+
+set [2] 0
+ca scanf
+if [2] cout 89
+if [2] cout 69
+if [2] cout 83
+eq [2] [2] 0
+if [2] cout 78
+if [2] cout 79
+cout 10
+ac

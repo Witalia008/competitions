@@ -1,0 +1,38 @@
+co push {
+    inc [0]
+    sub [[0]] [30] 48
+    ac
+}
+
+co sum {
+    set [32] [[0]]
+    dec [0]
+    add [[0]] [[0]] [32]
+    ac
+}
+
+co multi {
+    set [32] [[0]]
+    dec [0]
+    mul [[0]] [[0]] [32]
+    ac
+}
+
+co scanf {
+    cin [30]
+    lt [31] [30] 42
+    if [31] ac
+    gt [31] [30] 47
+    lt [32] [30] 58
+    eq [31] [31] [32]
+    if [31] ca push 
+    eq [31] [30] 43
+    if [31] ca sum
+    eq [31] [30] 42
+    if [31] ca multi
+}
+
+set [0] 0
+ca scanf
+iout [[0]]
+ac

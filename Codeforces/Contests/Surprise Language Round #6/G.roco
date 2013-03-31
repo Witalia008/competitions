@@ -1,0 +1,53 @@
+co scanf {
+    eq [202] [201] [0]
+    if [202] ac
+    add [201] [201] 1
+    iin [[201]]
+}
+
+co check {
+    lt [206] [203] [201]
+    if [206] inc [205]
+    ac
+}
+
+co count {
+    gt [204] [203] [0]
+    if [204] ac
+    lt [204] [[203]] [[201]]
+    if [204] inc [205]
+    eq [204] [[203]] [[201]]
+    if [204] ca check
+    inc [203]
+}
+
+co sort {
+    gt [202] [201] [0]
+    if [202] ac
+    set [203] 1
+    set [205] 0
+    ca count
+    add [205] [205] 101
+    set [[205]] [[201]]
+    inc [201]
+}
+
+co print {
+    gt [202] [201] [0]
+    if [202] ac
+    neq [202] [201] 101
+    if [202] cout 32
+    iout [[201]]
+    inc [201]
+}
+
+iin [0]
+set [201] 0
+ca scanf
+set [201] 1
+ca sort
+set [201] 101
+add [0] [0] 100
+ca print
+cout 10
+ac
