@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Created by Kozhukhivskyi on 06.10.2014.
+ * Created by witalia on 06.10.2014.
  */
 
 public class Main {
