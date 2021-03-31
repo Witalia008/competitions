@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build main file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/workspace/main.cpp",
+                "-o",
+                "${workspaceFolder}/workspace/main",
+                "-D",
+                "LOCAL_RUN"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "google code jam interactive",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "${workspaceFolder}/workspace/interactive_runner.py",
+                "${command:python.interpreterPath}",
+                "${workspaceFolder}/workspace/local_testing_tool.py",
+                "0",
+                "--",
+                "${workspaceFolder}/workspace/main",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/workspace"
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "g++ build main file"
+            ]
+        }
+    ]
+}

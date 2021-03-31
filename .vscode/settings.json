@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "[Dd]ockerfile*": "dockerfile",
+        "docker-compose*": "yaml",
+    },
+    // Editor.
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+        "editor.tabSize": 2
+    },
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "files.insertFinalNewline": true,
+    // Additional extensions settings
+    "todohighlight.keywordsPattern": "(TODO|FIXME)"
+}
