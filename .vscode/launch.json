@@ -24,6 +24,17 @@
             ],
             "preLaunchTask": "g++ build main file",
             "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Python: main",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/workspace/main.py",
+            "console": "integratedTerminal",
+            "env": {
+                "LOCAL_RUN": "1"
+            },
+            "cwd": "${workspaceFolder}/workspace"
         }
     ]
 }
