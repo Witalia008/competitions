@@ -3,6 +3,32 @@
     "tasks": [
         {
             "type": "shell",
+            "label": "clang++ build main file",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c++17",
+                "-stdlib=libc++",
+                "-g",
+                "-Wall",
+                "${workspaceFolder}/workspace/main.cpp",
+                "-o",
+                "${workspaceFolder}/workspace/main",
+                "-D",
+                "LOCAL_RUN"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/workspace"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
             "label": "g++ build main file",
             "command": "/usr/bin/g++",
             "args": [
@@ -21,7 +47,7 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             }
         },
         {
